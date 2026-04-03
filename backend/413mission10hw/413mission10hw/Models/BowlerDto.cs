@@ -1,5 +1,6 @@
-﻿namespace _413mission10hw.Models
+namespace _413mission10hw.Models
 {
+    // shape returned to the react client json uses camelcase from aspnet
     public class BowlerDto
     {
         public string BowlerFullName { get; set; }

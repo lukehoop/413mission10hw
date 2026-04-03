@@ -1,3 +1,4 @@
+/* starter demo button styles not used by the bowler directory */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -17,6 +18,7 @@
   }
 }
 
+/* stacked vite and framework logos from the default template */
 .hero {
   position: relative;
 
@@ -56,6 +58,7 @@
   }
 }
 
+/* vertical hero layout from the vite starter */
 #center {
   display: flex;
   flex-direction: column;
@@ -70,6 +73,7 @@
   }
 }
 
+/* two column links section from the vite starter */
 #next-steps {
   display: flex;
   border-top: 1px solid var(--border);
@@ -95,6 +99,7 @@
   }
 }
 
+/* left column in the next steps row */
 #docs {
   border-right: 1px solid var(--border);
 
@@ -104,6 +109,7 @@
   }
 }
 
+/* horizontal list of doc and social links */
 #next-steps ul {
   list-style: none;
   padding: 0;
@@ -153,6 +159,7 @@
   }
 }
 
+/* empty vertical gap before the page footer area */
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
@@ -161,6 +168,7 @@
   }
 }
 
+/* decorative tick marks for a progress style bar */
 .ticks {
   position: relative;
   width: 100%;

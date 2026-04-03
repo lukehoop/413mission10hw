@@ -5,6 +5,7 @@ interface BowlerTableProps {
     bowlers: Bowler[];
 }
 
+// responsive table with zebra striping for each bowler row
 const BowlerTable: React.FC<BowlerTableProps> = ({ bowlers }) => {
     return (
         <div style={{ margin: '20px', overflowX: 'auto' }}>

@@ -1,5 +1,7 @@
+// base url for local dotnet run
 @_413mission10hw_HostAddress = http://localhost:5088
 
+// sample template endpoint not wired in program cs
 GET {{_413mission10hw_HostAddress}}/weatherforecast/
 Accept: application/json
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// page title and intro text above the bowler table
 const BowlingHeading: React.FC = () => {
     return (
         <header style={{ textAlign: 'center', margin: '20px 0' }}>

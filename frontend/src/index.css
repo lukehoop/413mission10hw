@@ -1,3 +1,4 @@
+/* shared colors fonts and base typography */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -30,6 +31,7 @@
   }
 }
 
+/* automatic dark theme when the user prefers it */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -50,6 +52,7 @@
   }
 }
 
+/* main layout column for the react tree */
 #root {
   width: 1126px;
   max-width: 100%;
@@ -62,10 +65,12 @@
   box-sizing: border-box;
 }
 
+/* remove default browser margin around the app */
 body {
   margin: 0;
 }
 
+/* heading styles for page titles */
 h1,
 h2 {
   font-family: var(--heading);
@@ -95,6 +100,7 @@ p {
   margin: 0;
 }
 
+/* monospace styling for inline code and counter demo */
 code,
 .counter {
   font-family: var(--mono);

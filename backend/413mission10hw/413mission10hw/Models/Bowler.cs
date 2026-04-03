@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _413mission10hw.Models
 {
-    // Map to existing SQLite table 'bowlers'
+    // maps to the bowlers table in sqlite
     [Table("bowlers")]
     public class Bowler
     {
@@ -13,7 +13,7 @@ namespace _413mission10hw.Models
         [Required]
         public string BowlerFirstName { get; set; }
 
-        // Can be NULL in the SQLite database
+        // optional middle initial column may be null in the database
         public string? BowlerMiddleInit { get; set; }
 
         [Required]
@@ -29,10 +29,10 @@ namespace _413mission10hw.Models
 
         public string BowlerPhoneNumber { get; set; }
 
-        // Foreign Key
+        // links to teams teamid
         public int TeamId { get; set; }
 
-        // Navigation property
+        // loaded with include for queries that need the team name
         [ForeignKey("TeamId")]
         public Team Team { get; set; }
     }

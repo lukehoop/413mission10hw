@@ -1,3 +1,4 @@
+// matches the json properties returned from the bowler get endpoint
 export interface Bowler {
     bowlerFullName: string;
     teamName: string;

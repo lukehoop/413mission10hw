@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _413mission10hw.Models
 {
-    // Map to existing SQLite table 'teams'
+    // maps to the teams table in sqlite
     [Table("teams")]
     public class Team
     {
@@ -11,7 +11,7 @@ namespace _413mission10hw.Models
         public int TeamId { get; set; }
         public string TeamName { get; set; }
 
-        // Navigation property
+        // collection used for navigation from bowler to team
         public ICollection<Bowler> Bowlers { get; set; }
     }
 }

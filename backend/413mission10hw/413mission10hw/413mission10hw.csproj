@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
+  <!-- aspnet web api with sqlite and entity framework -->
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>

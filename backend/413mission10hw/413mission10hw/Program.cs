@@ -3,20 +3,22 @@ using _413mission10hw.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// register mvc controllers for api routes
 builder.Services.AddControllers();
 
-// Add DbContext with SQLite
+// connect entity framework to the sqlite bowling database
 builder.Services.AddDbContext<BowlingDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("BowlingDb")));
 
-// Add CORS - allow React app on Vite default port 5173
+// allow browser requests from the vite dev server on localhost and loopback
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173")
+            builder.WithOrigins(
+                       "http://localhost:5173",
+                       "http://127.0.0.1:5173")
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -24,8 +26,8 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-app.UseCors("AllowReactApp"); // Make sure this is before MapControllers
+// cors must run before routing maps controller endpoints
+app.UseCors("AllowReactApp");
 app.UseAuthorization();
 app.MapControllers();
 

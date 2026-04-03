@@ -2,6 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
+            // compiles the backend project for launch and ci
             "label": "build",
             "command": "dotnet",
             "type": "process",
@@ -14,6 +15,7 @@
             "problemMatcher": "$msCompile"
         },
         {
+            // produces a release folder for deployment
             "label": "publish",
             "command": "dotnet",
             "type": "process",
@@ -26,6 +28,7 @@
             "problemMatcher": "$msCompile"
         },
         {
+            // rebuild and restart the api when source files change
             "label": "watch",
             "command": "dotnet",
             "type": "process",

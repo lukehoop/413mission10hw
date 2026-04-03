@@ -5,6 +5,7 @@ using _413mission10hw.Models;
 
 namespace _413mission10hw.Controllers
 {
+    // route template resolves to api bowler from the controller class name
     [Route("api/[controller]")]
     [ApiController]
     public class BowlerController : ControllerBase
@@ -16,6 +17,7 @@ namespace _413mission10hw.Controllers
             _context = context;
         }
 
+        // returns json list of marlins and sharks bowlers with contact fields
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BowlerDto>>> GetBowlers()
         {

@@ -7,7 +7,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import prettier from 'eslint-plugin-prettier'
 import eslintConfigPrettier from 'eslint-config-prettier'
 
-
+// eslint flat config for typescript react hooks refresh and prettier
 export default defineConfig([
   globalIgnores(['dist']),
   {

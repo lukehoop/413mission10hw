@@ -5,14 +5,16 @@ import BowlerTable from './components/BowlerTable';
 import type { Bowler } from './types/Bowler';
 
 function App() {
+    // list from the api empty until the first request finishes
     const [bowlers, setBowlers] = useState<Bowler[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        // vite dev server forwards api requests to the aspnet backend on port 5088
         const fetchBowlers = async () => {
             try {
-                const response = await axios.get('http://localhost:5088/api/bowler');
+                const response = await axios.get('/api/bowler');
                 setBowlers(response.data);
                 setLoading(false);
             } catch (err) {

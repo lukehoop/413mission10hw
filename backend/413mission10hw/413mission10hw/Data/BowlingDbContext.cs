@@ -1,9 +1,9 @@
-﻿using _413mission10hw.Models;
+using _413mission10hw.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
 namespace _413mission10hw.Data
 {
+    // entity framework session for the bowling league sqlite file
     public class BowlingDbContext : DbContext
     {
         public BowlingDbContext(DbContextOptions<BowlingDbContext> options) : base(options)
@@ -15,6 +15,7 @@ namespace _413mission10hw.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // each bowler belongs to one team via teamid foreign key
             modelBuilder.Entity<Bowler>()
                 .HasOne(b => b.Team)
                 .WithMany(t => t.Bowlers)
