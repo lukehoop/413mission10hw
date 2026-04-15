@@ -13,4 +13,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="413mission10hw\**\*.cs" />
+    <Content Remove="413mission10hw\**\*" />
+    <EmbeddedResource Remove="413mission10hw\**\*" />
+    <None Remove="413mission10hw\**\*" />
+  </ItemGroup>
+
 </Project>

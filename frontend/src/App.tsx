@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import BowlingHeading from './components/BowlingHeading';
 import BowlerTable from './components/BowlerTable';
